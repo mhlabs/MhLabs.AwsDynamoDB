@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 
-namespace MhLabs.AwsDynamoDB
+namespace MhLabs.AwsDynamoDB.Converters
 {
-    public class DateTimeDynamoDBConverter : IPropertyConverter
+    public class DynamoUniversalDateTimeConverter : IPropertyConverter
     {
         public object FromEntry(DynamoDBEntry entry)
         {
