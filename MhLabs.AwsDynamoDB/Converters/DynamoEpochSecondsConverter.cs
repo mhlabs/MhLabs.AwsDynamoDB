@@ -9,7 +9,7 @@ namespace MhLabs.AwsDynamoDB.Converters
     {
         public static string CreateEpochSeconds(DateTime dateTime)
         {
-            var result = Amazon.Util.AWSSDKUtils.ConvertToUnixEpochSeconds(dateTime.AddDays(30));
+            var result = Amazon.Util.AWSSDKUtils.ConvertToUnixEpochSeconds(dateTime);
             return result.ToString();
         }
 
