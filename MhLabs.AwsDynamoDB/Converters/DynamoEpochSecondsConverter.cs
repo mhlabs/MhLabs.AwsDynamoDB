@@ -7,10 +7,10 @@ namespace MhLabs.AwsDynamoDB.Converters
 {
     public class DynamoEpochSecondsConverter : IPropertyConverter
     {
-        public static string CreateEpochSeconds(DateTime dateTime)
+        public static int CreateEpochSeconds(DateTime dateTime)
         {
             var result = Amazon.Util.AWSSDKUtils.ConvertToUnixEpochSeconds(dateTime);
-            return result.ToString();
+            return result;
         }
 
         public static DateTime ParseEpochSeconds(int epoch)
@@ -29,7 +29,8 @@ namespace MhLabs.AwsDynamoDB.Converters
                 {
                     entry = new Primitive
                     {
-                        Value = CreateEpochSeconds(dt)
+                        Value = CreateEpochSeconds(dt),
+                        Type = DynamoDBEntryType.Numeric
                     };
                 }
             }
