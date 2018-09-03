@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MhLabs.AwsDynamoDB", "MhLabs.AwsDynamoDB\MhLabs.AwsDynamoDB.csproj", "{6A0168D0-A09F-4824-B919-4D1C4BFE823D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MhLabs.AwsDynamoDB.Tests", "MhLabs.AwsDynamoDB.Tests\MhLabs.AwsDynamoDB.Tests.csproj", "{D05A8B05-D950-49A5-95A0-B33BA33B81AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6A0168D0-A09F-4824-B919-4D1C4BFE823D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A0168D0-A09F-4824-B919-4D1C4BFE823D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A0168D0-A09F-4824-B919-4D1C4BFE823D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D05A8B05-D950-49A5-95A0-B33BA33B81AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D05A8B05-D950-49A5-95A0-B33BA33B81AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D05A8B05-D950-49A5-95A0-B33BA33B81AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D05A8B05-D950-49A5-95A0-B33BA33B81AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
