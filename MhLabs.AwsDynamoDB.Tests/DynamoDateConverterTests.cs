@@ -8,6 +8,36 @@ namespace MhLabs.AwsDynamoDB.Tests
     public class DynamoDateConverterTests
     {
         [Fact]
+        public void Should_Treat_Local_Date_As_Utc()
+        {
+            // arrange
+            var date = new DateTime(2020, 1, 2, 0, 0, 1, DateTimeKind.Local);
+            var converter = new DynamoDateConverter();
+            var expected = "2020-01-02";
+
+            // act
+            var entry = converter.ToEntry(date);
+
+            // assert
+            Assert.Equal(expected, entry.AsString());
+        }
+
+        [Fact]
+        public void Should_Treat_Date_As_Utc()
+        {
+            // arrange
+            var date = new DateTime(2020, 1, 2, 0, 0, 1, DateTimeKind.Utc);
+            var converter = new DynamoDateConverter();
+            var expected = "2020-01-02";
+
+            // act
+            var entry = converter.ToEntry(date);
+
+            // assert
+            Assert.Equal(expected, entry.AsString());
+        }
+
+        [Fact]
         public void Should_Create_Null_Date_From_Nullable()
         {
             // arrange
