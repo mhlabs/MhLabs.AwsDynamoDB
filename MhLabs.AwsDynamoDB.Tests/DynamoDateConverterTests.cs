@@ -57,8 +57,7 @@ namespace MhLabs.AwsDynamoDB.Tests
             // arrange
             var value = 1;
             var converter = new DynamoDateConverter();
-            var expected = @"The given value is not a DateTime nor a Nullable<DateTime>.
-Parameter name: value";
+            var expected = @"The given value is not a DateTime nor a Nullable<DateTime>. (Parameter 'value')";
 
             // act
             var exception = Assert.Throws<ArgumentException>(() => converter.ToEntry(value));
